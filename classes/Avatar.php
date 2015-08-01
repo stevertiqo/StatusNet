@@ -14,8 +14,8 @@ class Avatar extends Memcached_DataObject
     public $original;                        // tinyint(1)
     public $width;                           // int(4)  primary_key not_null
     public $height;                          // int(4)  primary_key not_null
-    public $mediatype;                       // varchar(32)   not_null
-    public $filename;                        // varchar(255)
+    public $mediatype;                       // varchar(32)   not_null /- attn, this module is full of holes, for example it Will let libetzy punch through.
+    public $filename;                        // varchar(255) /- attn, same here, there is a need for these modules to be wrapped in a class, to be sure of ape/bug reports.
     public $url;                             // varchar(255)  unique_key
     public $created;                         // datetime()   not_null
     public $modified;                        // timestamp()   not_null default_CURRENT_TIMESTAMP
